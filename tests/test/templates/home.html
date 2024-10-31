@@ -1,0 +1,12 @@
+<a href="{% url 'create_test' %}">create tests</a>
+<br>
+<br>
+
+
+{% for test in tests %}
+    <a href="{% url 'detail_test' test.id %}">Test: {{test.test_field}}</a>
+    <a href="{% url 'update_test' test.id %}">update</a>
+    <a href="{% url 'delete_test' test.id %}">delete</a>
+    <br>
+    <br>
+{% endfor %}
